@@ -1,0 +1,102 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "alt+cmd+2",
+    "command": "workbench.action.editorLayoutTwoColumns"
+  },
+  {
+    "key": "alt+cmd+3",
+    "command": "workbench.action.editorLayoutThreeColumns"
+  },
+  {
+    "key": "alt+cmd+4",
+    "command": "workbench.action.editorLayoutTwoByTwoGrid"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFileFolder"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "alt+cmd+m",
+    "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "extension.elixirRunTestFile",
+    "when": "editorLangId == elixir"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "extension.elixirRunTestAtCursor",
+    "when": "editorLangId == elixir"
+  },
+  // {
+  //     "key": "shift+ctrl+`",
+  //     "command": "workbench.action.focusActiveEditorGroup",
+  //     "when": "terminalFocus"
+  // },
+  // {
+  //     "key": "ctrl+`",
+  //     "command": "-workbench.action.terminal.toggleTerminal"
+  // },
+  // {
+  //     "key": "ctrl+`",
+  //     "command": "workbench.action.toggleMaximizedPanel",
+  //     "when": "!terminalFocus"
+  // },
+  // {
+  //     "key": "ctrl+`",
+  //     "command": "workbench.action.closePanel",
+  //     "when": "terminalFocus"
+  // },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "vim.use<C-w> && vim.active && terminalFocus"
+  },
+  {
+    "key": "shift+cmd+j",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "shift+cmd+k",
+    "when": "terminalFocus",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "-extension.elixirJumpToTest",
+    "when": "editorTextFocus && editorLangId == 'elixir'"
+  }
+]

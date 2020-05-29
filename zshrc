@@ -1,0 +1,37 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# === Doximity Specific ===
+if [[ -s "/Users/adam/work/dox-compose/bin/dox-init" ]]; then
+  eval "$("/Users/adam/work/dox-compose/bin/dox-init")"
+fi
+
+# === ALIASES ===
+
+alias brewup="brew update; brew upgrade; brew prune; brew cleanup --prune-prefix; brew doctor"
+
+# Tmux
+alias mux="tmuxinator"
+alias tmux="tmux -2"
+alias tml="tmux list-sessions"
+
+# Vim
+alias vim "nvim"
+alias vi "nvim"
+alias realvim "/usr/local/bin/vim"
+
+# Ruby
+alias ror "bundle exec rails"
+alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake db:migrate"
+alias be "bundle exec"

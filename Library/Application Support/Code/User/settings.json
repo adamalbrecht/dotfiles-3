@@ -1,0 +1,61 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "editor.fontSize": 16,
+    "[elm]": {
+        "editor.formatOnSave": true
+    },
+    "editor.lineNumbers": "relative",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "autoDarkMode.lightTheme": "Atom One Light",
+    "autoDarkMode.darkTheme": "Dracula",
+    "terminal.integrated.fontSize": 15,
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.fontFamily": "'JetBrains Mono', 'SF Mono', 'Courier New', Consolas, Menlo",
+    "markdown.preview.fontFamily": "Menlo, Monaco, stem, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
+    "vim.useSystemClipboard": true,
+    "editor.minimap.enabled": false,
+    "ruby.lint": {
+        "standard": true
+    },
+    "emmet.includeLanguages": {
+        "HTML (EEx)": "html"
+    },
+    "emmet.excludeLanguages": [
+        "markdown",
+        "haml"
+    ],
+    "ruby.format": "rubocop",
+    "[ruby]": {
+        "editor.formatOnSave": true
+    },
+    "solargraph.autoformat": true,
+    "ruby.useBundler": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.formatOnSave": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "files.simpleDialog.enable": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.lineHeight": 24,
+    "terminal.integrated.rendererType": "dom",
+    "diffEditor.renderSideBySide": false,
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "editor.renderLineHighlight": "all",
+    "crystal-lang.completion": true,
+    "crystal-lang.implementations": true,
+    "crystal-lang.server": "/Users/adam/Code/scry/bin/scry",
+    "crystal-lang.compiler": "/usr/local/bin/crystal",
+    "crystal-lang.hover": true,
+    "crystal-lang.logLevel": "warn",
+    "sourcekit-lsp.serverPath": "/usr/local/bin/sourcekit-lsp",
+    "vim.easymotionMarkerFontFamily": "",
+    "workbench.activityBar.visible": true,
+    "elixirLS.fetchDeps": false,
+    "explorer.confirmDelete": false,
+    "markdown.preview.openMarkdownLinks": "inEditor",
+    "autoDarkMode.lightIconTheme": "",
+    "autoDarkMode.darkIconTheme": ""
+}

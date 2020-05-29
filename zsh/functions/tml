@@ -1,0 +1,5 @@
+# No arguments: `git status`
+# With arguments: acts like `git`
+tml() {
+  tmux list-sessions "$@"
+}

@@ -30,10 +30,10 @@ alias mux="tmuxinator"
 alias tmux="tmux -2"
 alias tml="tmux list-sessions"
 
-# Vim
-alias vim "nvim"
-alias vi "nvim"
-alias realvim "/usr/local/bin/vim"
+# Vim -> Neovim
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
 # Ruby
 alias ror "bundle exec rails"

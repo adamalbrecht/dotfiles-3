@@ -16,6 +16,16 @@ fi
 
 # Customize to your needs...
 
+# === Auto Set Kitty Theme ===
+if [ -x "$(command -v kitty)" ]; then
+  if [[ ( $(2>/dev/null defaults read -g AppleInterfaceStyle) =~ 'Dark') ]]; then
+    kitty @ set-colors --all --configured ~/.config/kitty/dark_theme.conf
+  else
+    # kitty @ --to unix:/tmp/kitty set-colors --reset
+    kitty @ set-colors --all --configured ~/.config/kitty/light_theme.conf
+  fi
+fi
+
 # === Doximity Specific ===
 if [[ -s "/Users/adam/work/dox-compose/bin/dox-init" ]]; then
   eval "$("/Users/adam/work/dox-compose/bin/dox-init")"
@@ -41,4 +51,6 @@ alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake d
 alias be "bundle exec"
 
 # Docker
-alias docker-stop-all "docker stop $(docker ps -q)"
+if [ -x "$(command -v docker)" ]; then
+  alias docker-stop-all "docker stop $(docker ps -q)"
+fi

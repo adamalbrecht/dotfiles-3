@@ -485,4 +485,15 @@ let g:dash_map = {
 " let g:mix_format_on_save = 1
 " }}}
 
+" SOURCE LOCAL OVERRIDES {{{
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
+call SourceIfExists("~/.config/nvim/local.vim")
+
+" }}}
+
 " vim:fileencoding=utf-8:foldmethod=marker:foldlevel=0

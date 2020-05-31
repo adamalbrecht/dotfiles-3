@@ -34,10 +34,12 @@
 
   " TESTING {{{
   Plug 'janko-m/vim-test'               " Execute tests using keyboard shortcuts
+  Plug 'christoomey/vim-tmux-runner'    " Run tests from vim-test in a tmux pane
   " }}}
 
   " LANGUAGE SPECIFIC {{{
-  Plug 'rhysd/vim-crystal'              " Crystal syntax highlighting
+  Plug 'ngmy/vim-rubocop'                 " Rubocop is a code formatter / linter for ruby
+  Plug 'rhysd/vim-crystal'                " Crystal syntax highlighting
   Plug 'pangloss/vim-javascript'          " Javascript syntax highlighting
   Plug 'MaxMEllon/vim-jsx-pretty'         " JSX / React syntax highlighting
   Plug 'tpope/vim-endwise'                " Auto insert 'end' in Ruby, Elixir, vimscript, etc

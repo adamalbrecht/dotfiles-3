@@ -39,8 +39,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-  'osx' \
-  'git'
+  'osx'
 
 #
 # Autosuggestions
@@ -118,7 +117,7 @@ zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'kylewest'
+zstyle ':prezto:module:prompt' theme 'nicoulaj'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)

@@ -214,9 +214,6 @@
     endif
   endif
   call SetColorScheme()
-
-  map <F4> :call ColorSchemeLight()<CR>
-  map <F5> :call ColorSchemeDark()<CR>
 " }}}
 
 " TABS {{{

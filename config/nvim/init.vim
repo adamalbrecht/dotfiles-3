@@ -81,7 +81,7 @@
   set wildmenu                      " : command line completion
   set lazyredraw                    " redraw only when we need to.
   set mouse=a                       " Enable mouse support
-  set shell=fish                    " Use fish shell when running commands
+  set shell=zsh                     " Use zsh shell when running commands
   set visualbell                    " Use a visual bell instead of beeping
   set noerrorbells                  " Don't beep on errors
 " }}}

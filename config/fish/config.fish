@@ -38,9 +38,12 @@ function download_website
   wget -r -p -E -k $argv
 end
 
-# See terminfo folder
-# set -x TERMINFO ~/.terminfo
-if test -d ~/.asdf
+if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 end
+
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+if test -e ~/.config/fish/local.fish
+  source ~/.config/fish/local.fish
+end

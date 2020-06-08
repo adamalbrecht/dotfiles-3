@@ -12,7 +12,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Source Asdf
-. $(brew --prefix asdf)/asdf.sh
+. $HOME/.asdf/asdf.sh
 
 # Customize to your needs...
 

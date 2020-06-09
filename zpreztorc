@@ -35,12 +35,15 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
   'history-substring-search' \
+  'autosuggestions' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
   'prompt' \
-  'osx'
+  'osx' \
+  'git' \
+  'syntax-highlighting'
 
 #
 # Autosuggestions

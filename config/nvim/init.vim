@@ -417,7 +417,7 @@ let g:goyo_height = '90%'
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/',
                     \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 0
-let g:vimwiki_filetypes = ['markdown.vimwiki']
+let g:vimwiki_filetypes = ['markdown']
 map <Leader>tt <Plug>VimwikiToggleListItem
 nmap -- <Plug>VimwikiRemoveHeaderLevel
 " }}}

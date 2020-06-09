@@ -1,10 +1,6 @@
 {
   "workspace.ignoredFiletypes": ["markdown","vimwiki", "vimwiki.markdown", "log","txt","help"],
   "languageserver": {
-     "elixirLS": {
-       "command": "/Users/adam/Code/elixir-ls/release/language_server.sh",
-       "filetypes": ["elixir", "eelixir"]
-     },
     "elmLS": {
       "command": "/usr/local/bin/elm-language-server",
       "filetypes": ["elm"],
@@ -16,5 +12,6 @@
         "elmAnalyseTrigger": "change"
       }
     }
-  }
+  },
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
 }

@@ -52,7 +52,7 @@
 
   " LANGUAGES I'M NOT USING RIGHT NOW {{{
   " Plug 'andys8/vim-elm-syntax'
-  " Plug 'elixir-editors/vim-elixir'        " Elixir syntax highlighting
+  Plug 'elixir-editors/vim-elixir'        " Elixir syntax highlighting
   " Plug 'mhinz/vim-mix-format'             " Integrate the elixir formatter
   " }}}
 

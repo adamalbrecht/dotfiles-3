@@ -46,6 +46,7 @@
   Plug 'ap/vim-css-color'                 " Highlight Colors in CSS
   Plug 'stephpy/vim-yaml'                 " Better YAML Syntax Highlighting
   Plug 'plasticboy/vim-markdown'          " Better markdown support
+  Plug 'slim-template/vim-slim'           " Slim template syntax highlighting
   Plug 'dag/vim-fish'                     " Syntax highlighting for fish shell scripts
   " }}}
 
@@ -447,6 +448,7 @@ let g:dash_map = {
     \ 'jsx' : ['react', 'javascript', 'lodash'],
     \ 'sass' : ['css', 'sass', 'bourbon', 'susy'],
     \ 'haml' : ['haml', 'ruby', 'rails', 'ruby-on-rails'],
+    \ 'slim' : ['slim', 'ruby', 'rails', 'ruby-on-rails'],
     \ 'elixir' : ['elixir', 'ecto', 'phoenix'],
     \ 'eelixir' : ['phoenix_html', 'phoenix', 'elixir'],
     \ 'crystal' : ['crystal']

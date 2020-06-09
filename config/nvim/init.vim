@@ -456,25 +456,29 @@ let g:dash_map = {
 " }}}
 
 " VIM-TEST {{{
-
-  " let test#ruby#rspec#executable = 'bin/rspec'
-
   " Leader-s to run test(s) near cursor
   nmap <silent> <leader>s :TestNearest<CR>
   " Leader-t to run all tests in file
   nmap <silent> <leader>t :TestFile<CR>
+  " Leader-T to run entire suite
+  nmap <silent> <leader>T :TestSuite<CR>
   " Leader-l to run last test
   nmap <silent> <leader>l :TestLast<CR>
 
-  let g:test#vimterminal_persist_session = 1
-
   if exists('$TMUX')
-    let test#strategy = "neovim" " Run tests in integrated terminal
+    let test#strategy = "vtr" " Run tests in tmux pane
+    " let test#strategy = "neovim" " Run tests in integrated terminal
   elseif has("nvim")
     let test#strategy = "neovim" " Run tests in integrated terminal
   else
     let test#strategy = "basic"
   endif
+
+  let test#ruby#rspec#options = {
+    \ 'file':    '--format documentation'
+  \}
+
+  let g:test#preserve_screen = 1
 
   " CTRL-o to exit terminal insert mode
   if has('nvim')

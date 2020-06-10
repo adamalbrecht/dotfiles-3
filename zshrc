@@ -23,6 +23,12 @@ alias rm="rmtrash"
 
 alias brewup="brew update; brew upgrade; brew prune; brew cleanup --prune-prefix; brew doctor"
 
+# Filesystem aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # Tmux
 alias mux="tmuxinator"
 alias tmux="tmux -2"

@@ -44,8 +44,3 @@ alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake d
 alias be "bundle exec"
 
 source ~/.zshlocal
-
-# # Docker
-# if [ -x "$(command -v docker)" ]; then
-#   alias docker-stop-all "docker stop $(docker ps -q)"
-# fi

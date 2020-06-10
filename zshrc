@@ -34,17 +34,16 @@ alias mux="tmuxinator"
 alias tmux="tmux -2"
 alias tml="tmux list-sessions"
 
+alias vi="command vim"
+alias realvim="command vim"
+alias vim='nvim'
+
 # Ruby
 alias ror "bundle exec rails"
 alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake db:migrate"
 alias be "bundle exec"
 
 source ~/.zshlocal
-
-# Vim -> Neovim
-# if type nvim > /dev/null 2>&1; then
-#   alias vim='nvim'
-# fi
 
 # # Docker
 # if [ -x "$(command -v docker)" ]; then

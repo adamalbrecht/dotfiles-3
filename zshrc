@@ -16,11 +16,6 @@ fi
 
 # Customize to your needs...
 
-# === Doximity Specific ===
-if [[ -s "/Users/adam/work/dox-compose/bin/dox-init" ]]; then
-  eval "$("/Users/adam/work/dox-compose/bin/dox-init")"
-fi
-
 # === ALIASES ===
 
 alias brewup="brew update; brew upgrade; brew prune; brew cleanup --prune-prefix; brew doctor"

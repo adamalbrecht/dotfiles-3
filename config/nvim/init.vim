@@ -6,7 +6,8 @@
   endif
 
   " BASICS {{{
-  Plug 'tpope/vim-commentary'           " Toggle comments shortcut: gcc
+  Plug 'tpope/vim-commentary'               " Toggle comments shortcut: gcc
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Auto switch between relative and absolute line numbers
   " }}}
 
   " GIT INTEGRATION {{{
@@ -128,6 +129,8 @@
   set number                        " Show Line Numbers
   set relativenumber                " Make line numbers relative to current line SLOW?
   set numberwidth=5                 " Width of line numbers
+  " Ctrl-n to toggle between relative and absolute line numbers
+  nnoremap <silent> <C-n> :set relativenumber!<cr>
 " }}}
 
 " FOLDING {{{

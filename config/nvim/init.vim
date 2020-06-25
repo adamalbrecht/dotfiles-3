@@ -66,6 +66,7 @@
   " THEMES {{{
   Plug 'dracula/vim', { 'as': 'dracula' }  " Dark Theme
   Plug 'rakr/vim-one'                      " Light Theme
+  Plug 'lifepillar/vim-solarized8'         " Solarized Theme
   " }}}
   call plug#end()
 
@@ -188,7 +189,8 @@
 
   function! ColorSchemeLight()
     set background=light
-    colorscheme one
+    colorscheme solarized8_high
+    
     call UseItalicCharacters()
   endfunction
 

@@ -169,9 +169,7 @@
 
 " COLORSCHEME {{{
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  if (has("nvim"))
-    set termguicolors
-  endif
+  set termguicolors
 
   let g:one_allow_italics = 1
   " Make comments and html arguments italic

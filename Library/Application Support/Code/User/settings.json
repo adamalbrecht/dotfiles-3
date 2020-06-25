@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Dracula",
     "editor.fontSize": 16,
     "[elm]": {
         "editor.formatOnSave": true
@@ -18,9 +17,6 @@
     "markdown.preview.fontFamily": "Menlo, Monaco, stem, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
     "vim.useSystemClipboard": true,
     "editor.minimap.enabled": false,
-    "ruby.lint": {
-        "standard": true
-    },
     "emmet.includeLanguages": {
         "HTML (EEx)": "html"
     },
@@ -52,10 +48,16 @@
     "crystal-lang.logLevel": "warn",
     "sourcekit-lsp.serverPath": "/usr/local/bin/sourcekit-lsp",
     "vim.easymotionMarkerFontFamily": "",
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "elixirLS.fetchDeps": false,
     "explorer.confirmDelete": false,
     "markdown.preview.openMarkdownLinks": "inEditor",
     "autoDarkMode.lightIconTheme": "",
-    "autoDarkMode.darkIconTheme": ""
+    "autoDarkMode.darkIconTheme": "",
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.goToNext": true,
+    "nasc-touchbar.rename": false,
+    "nasc-touchbar.toggleSidebar": true,
+    "workbench.colorTheme": "Atom One Light",
+    "workbench.statusBar.visible": true
 }

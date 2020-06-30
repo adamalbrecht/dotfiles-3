@@ -43,7 +43,8 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'osx' \
   'git' \
-  'syntax-highlighting'
+  'syntax-highlighting' \
+  'rails'
 
 #
 # Autosuggestions

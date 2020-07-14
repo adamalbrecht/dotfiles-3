@@ -764,11 +764,7 @@ c.fonts.prompts = '15pt sans-serif'
 
 ## Font used in the statusbar.
 ## Type: Font
-c.fonts.statusbar = '15pt Menlo'
-
-## Font used in the tab bar.
-## Type: QtFont
-c.fonts.tabs = '15pt Menlo'
+c.fonts.statusbar = '15pt JetBrains Mono'
 
 ## Font family for cursive fonts.
 ## Type: FontFamily

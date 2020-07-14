@@ -58,9 +58,10 @@
   " }}}
 
   " WRITING {{{
-  Plug 'vimwiki/vimwiki'
+  " Plug 'vimwiki/vimwiki'
   Plug 'junegunn/goyo.vim'              " Distraction Free Writing Mode
   Plug 'itspriddle/vim-marked'          " Preview Markdown Files in Marked 2
+  Plug 'https://github.com/alok/notational-fzf-vim'
   " }}}
 
   " THEMES {{{
@@ -116,13 +117,13 @@
   " Spell-check Markdown files and Git commit messages
   autocmd FileType markdown setlocal spell
   autocmd FileType gitcommit setlocal spell
-  autocmd FileType vimwiki setlocal spell
-  autocmd FileType vimwiki.markdown setlocal spell
+  " autocmd FileType vimwiki setlocal spell
+  " autocmd FileType vimwiki.markdown setlocal spell
 
   autocmd FileType markdown setlocal complete+=kspell
   autocmd FileType gitcommit setlocal complete+=kspell
-  autocmd FileType vimwiki setlocal complete+=kspell
-  autocmd FileType vimwiki.markdown setlocal complete+=kspell
+  " autocmd FileType vimwiki setlocal complete+=kspell
+  " autocmd FileType vimwiki.markdown setlocal complete+=kspell
 
 " }}}
 
@@ -381,13 +382,29 @@ let g:goyo_width = '100'
 let g:goyo_height = '90%'
 " }}}
 
+" Markdown {{{
+" g:vim_markdown_conceal = 2
+" au FileType markdown setl conceallevel=1
+let g:vim_markdown_conceal_code_blocks = 0
+" }}}
+
 " VIM WIKI {{{
-let g:vimwiki_list = [{'path': '~/Documents/Wiki/',
-                    \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_global_ext = 0
-let g:vimwiki_filetypes = ['markdown']
-map <Leader>tt <Plug>VimwikiToggleListItem
-nmap -- <Plug>VimwikiRemoveHeaderLevel
+" let g:vimwiki_list = [{'path': '~/Documents/Wiki/',
+"                     \ 'syntax': 'markdown', 'ext': '.md'}]
+" let g:vimwiki_global_ext = 0
+" let g:vimwiki_filetypes = ['markdown']
+" map <Leader>tt <Plug>VimwikiToggleListItem
+" nmap -- <Plug>VimwikiRemoveHeaderLevel
+" }}}
+
+" notational-fzf-vim {{{
+let g:nv_search_paths = ['~/Documents/Notes']
+" <space>n to search/create a notes
+nnoremap <leader>n :NV<CR>                
+" ctrl-n to create a new note from the search menu
+let g:nv_create_note_key = 'ctrl-n'
+let g:nv_default_extension = '.md'
+let g:nv_ignore_pattern = ['*.json', '*.dict', '.cache/*', 'i/*', '*.jpg', '*.jpeg', '*.png']
 " }}}
 
 " COC.vim {{{

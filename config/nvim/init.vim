@@ -62,6 +62,7 @@
   Plug 'junegunn/goyo.vim'              " Distraction Free Writing Mode
   Plug 'itspriddle/vim-marked'          " Preview Markdown Files in Marked 2
   Plug 'https://github.com/alok/notational-fzf-vim'
+  Plug 'jkramer/vim-checkbox'
   " }}}
 
   " THEMES {{{

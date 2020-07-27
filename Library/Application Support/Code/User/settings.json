@@ -32,7 +32,7 @@
     "ruby.useBundler": true,
     "editor.minimap.renderCharacters": false,
     "editor.formatOnSave": true,
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "files.simpleDialog.enable": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.lineHeight": 24,

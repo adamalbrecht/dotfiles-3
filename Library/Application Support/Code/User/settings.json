@@ -58,6 +58,9 @@
     "nasc-touchbar.goToNext": true,
     "nasc-touchbar.rename": false,
     "nasc-touchbar.toggleSidebar": true,
-    "workbench.colorTheme": "Atom One Light",
-    "workbench.statusBar.visible": true
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.statusBar.visible": true,
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "window.autoDetectColorScheme": true
 }

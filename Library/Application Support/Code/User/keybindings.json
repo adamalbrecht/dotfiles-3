@@ -60,43 +60,43 @@
     "command": "extension.elixirRunTestAtCursor",
     "when": "editorLangId == elixir"
   },
-  // {
-  //     "key": "shift+ctrl+`",
-  //     "command": "workbench.action.focusActiveEditorGroup",
-  //     "when": "terminalFocus"
-  // },
-  // {
-  //     "key": "ctrl+`",
-  //     "command": "-workbench.action.terminal.toggleTerminal"
-  // },
-  // {
-  //     "key": "ctrl+`",
-  //     "command": "workbench.action.toggleMaximizedPanel",
-  //     "when": "!terminalFocus"
-  // },
-  // {
-  //     "key": "ctrl+`",
-  //     "command": "workbench.action.closePanel",
-  //     "when": "terminalFocus"
-  // },
   {
-    "key": "ctrl+w k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "vim.use<C-w> && vim.active && terminalFocus"
+    "key": "shift+cmd+s",
+    "command": "extension.runSpecLine"
   },
   {
-    "key": "shift+cmd+j",
-    "when": "terminalFocus",
-    "command": "workbench.action.terminal.focusNext"
+    "key": "cmd+l",
+    "command": "-extension.runSpecLine"
   },
   {
-    "key": "shift+cmd+k",
-    "when": "terminalFocus",
-    "command": "workbench.action.terminal.focusPrevious"
+    "key": "cmd+r",
+    "command": "-extension.runAllSpecFiles"
+  },
+  // https://dev.to/ajkerrigan/bring-your-vim-tmux-navigation-reflexes-to-vs-code-3abi
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
   },
   {
-    "key": "shift+cmd+j",
-    "command": "-extension.elixirJumpToTest",
-    "when": "editorTextFocus && editorLangId == 'elixir'"
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
   }
 ]

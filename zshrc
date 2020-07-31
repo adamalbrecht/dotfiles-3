@@ -42,4 +42,9 @@ alias vim='nvim'
 alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake db:migrate"
 alias be "bundle exec"
 
+# FZF
+# Use silver searcher for list files from the filesystem
+# and ignore git files
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 source ~/.zshlocal

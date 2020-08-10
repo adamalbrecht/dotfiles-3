@@ -98,5 +98,15 @@
     "key": "ctrl+l",
     "command": "workbench.action.nextPanelView",
     "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.scrollUpDown",
+    "when": "panelFocus"
   }
 ]

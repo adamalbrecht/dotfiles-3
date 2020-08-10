@@ -26,7 +26,7 @@
   Plug 'rizzatti/dash.vim'              " Search Dash documentation directly from Vim
   " }}}
 
-  " AUTOCOMPLETION {{{
+  " AUTOCOMPLETION & LINTING {{{
   Plug 'neoclide/coc.nvim', {'branch': 'release'} " VSCode Language Server Protocol autocompletion, etc
   Plug 'vim-syntastic/syntastic'        " Syntax Checker
   " Plug 'ludovicchabant/vim-gutentags'   " Automatically runs ctags upon save
@@ -416,6 +416,8 @@ autocmd FileType markdown let b:coc_suggest_disable = 1
 autocmd FileType vimwiki let b:coc_suggest_disable = 1
 autocmd FileType vimwiki.markdown let b:coc_suggest_disable = 1
 autocmd FileType gitcommit let b:coc_suggest_disable = 1
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

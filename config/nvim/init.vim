@@ -204,6 +204,10 @@
       else
         call ColorSchemeLight()
       endif
+    else
+      set background=dark
+      colorscheme dracula
+      call UseItalicCharacters()
     endif
   endfunction
 

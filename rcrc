@@ -1,1 +1,2 @@
 UNDOTTED="Library"
+EXCLUDES="install_ubuntu.sh"

@@ -1,26 +1,27 @@
 #!/bin/bash
 
 echo "Updating..."
-apt-get update
+sudo apt-get upgrade -y
+sudo apt-get update -y
 
 echo "Installing Common Dev Tools..."
-apt-get install curl wget git zsh silversearcher-ag tmux universal-ctags
+sudo apt-get install build-essential curl wget git zsh neovim silversearcher-ag tmux universal-ctags ripgrep -y
 
 echo "Installing RCM dotfiles manager..."
-add-apt-repository ppa:martin-frost/thoughtbot-rcm
-apt-get update
-apt-get install rcm
+sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm -y
+sudo apt-get update
+sudo apt-get install rcm -y
 
 echo "Installing NeoVim and dependencies..."
-apt-get install software-properties-common
-apt-get install python-software-properties
-apt-get install python-dev python-pip python3-dev python3-pip
-add-apt-repository ppa:neovim-ppa/stable
-apt-get update
-apt-get install neovim
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+echo "Setting up Github key"
+ssh-keygen -F github.com || ssh-keyscan github.com >>~/.ssh/known_hosts
 
 echo "Cloning Dotfiles"
-if ! [ ! -f "~/.dotfiles" ]; then
+if [ ! -d "~/.dotfiles" ]; then
   git clone git@github.com:adamalbrecht/dotfiles-3.git ~/.dotfiles
 else
   cd ~/.dotfiles
@@ -28,8 +29,14 @@ else
 fi
 rcup
 
+echo "Setting up Zsh"
+if [ ! -d "~/.zprezto" ]; then
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "~/.zprezto"
+fi
+touch ~/.zshlocal
+
 echo "Installing ASDF..."
-if ! [ ! -f "~/.asdf" ]; then
+if [ ! -d "~/.asdf" ]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 fi
 cd ~/.asdf
@@ -39,12 +46,14 @@ echo "Installing Ruby..."
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby 2.7.1
 
+echo "Installing NodeJS..."
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 echo "Installing FZF..."
-if ! [ ! -f "~/.fzf" ]; then
+if [ ! -d "~/.fzf" ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-else
-  cd ~/.fzf
-  git pull
+  ~/.fzf/install --no-zsh --no-bash --no-fish
 fi
-~/.fzf/install
+
+chsh -s /bin/zsh

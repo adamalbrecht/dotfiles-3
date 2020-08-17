@@ -5,7 +5,9 @@ sudo apt-get upgrade -y
 sudo apt-get update -y
 
 echo "Installing Common Dev Tools..."
-sudo apt-get install build-essential curl wget git zsh neovim silversearcher-ag tmux universal-ctags ripgrep -y
+sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev libssl-dev
+sudo apt-get install -y curl wget git
+sudo apt-get install -y zsh neovim silversearcher-ag tmux universal-ctags ripgrep -y
 
 echo "Installing RCM dotfiles manager..."
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm -y

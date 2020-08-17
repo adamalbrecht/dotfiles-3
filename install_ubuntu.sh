@@ -9,6 +9,9 @@ sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev li
 sudo apt-get install -y curl wget git
 sudo apt-get install -y zsh neovim silversearcher-ag tmux universal-ctags ripgrep -y
 
+echo "Installing Homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 echo "Installing RCM dotfiles manager..."
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm -y
 sudo apt-get update
@@ -56,9 +59,9 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "Installing FZF..."
-if [ ! -d "~/.fzf" ]; then
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install --no-zsh --no-bash --no-fish
+if ! command -v COMMAND &> /dev/null
+then
+  brew install fzf
 fi
 
 chsh -s /bin/zsh

@@ -55,8 +55,10 @@ asdf install ruby 2.7.1
 asdf global ruby 2.7.1
 
 echo "Installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install -y nodejs
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf install nodejs 14.8.0
+asdf global nodejs 14.8.0
 
 echo "Installing FZF..."
 if ! command -v COMMAND &> /dev/null

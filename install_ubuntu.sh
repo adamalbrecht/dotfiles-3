@@ -26,7 +26,7 @@ rcup
 
 echo "Setting up Zsh"
 if [ ! -d "~/.zprezto" ]; then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "~/.zprezto"
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 fi
 touch ~/.zshlocal
 

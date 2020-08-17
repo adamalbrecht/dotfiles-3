@@ -49,6 +49,7 @@ git checkout "$(git describe --abbrev=0 --tags)"
 echo "Installing Ruby..."
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby 2.7.1
+asdf global ruby 2.7.1
 
 echo "Installing NodeJS..."
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -

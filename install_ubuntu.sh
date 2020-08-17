@@ -12,6 +12,10 @@ sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm -y
 sudo apt-get update
 sudo apt-get install rcm -y
 
+echo "Install MySQL..."
+sudo apt install mysql-server
+sudo mysql_secure_installation
+
 echo "Setting up Github key"
 ssh-keygen -F github.com || ssh-keyscan github.com >>~/.ssh/known_hosts
 

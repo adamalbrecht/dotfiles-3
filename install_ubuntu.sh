@@ -12,6 +12,9 @@ sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm -y
 sudo apt-get update
 sudo apt-get install rcm -y
 
+echo "Setup Tmux Plugins"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "Install MySQL..."
 sudo apt install mysql-server
 sudo mysql_secure_installation

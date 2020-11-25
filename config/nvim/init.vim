@@ -63,13 +63,11 @@
   " Plug 'vimwiki/vimwiki'
   Plug 'junegunn/goyo.vim'              " Distraction Free Writing Mode
   Plug 'itspriddle/vim-marked'          " Preview Markdown Files in Marked 2
-  Plug 'https://github.com/alok/notational-fzf-vim'
   Plug 'jkramer/vim-checkbox'
   " }}}
 
   " THEMES {{{
   Plug 'dracula/vim', { 'as': 'dracula' }  " Dark Theme
-  Plug 'rakr/vim-one'                      " Light Theme
   Plug 'lifepillar/vim-solarized8'         " Solarized Theme
   " }}}
   call plug#end()
@@ -414,16 +412,6 @@ let g:vim_markdown_conceal_code_blocks = 0
 " let g:vimwiki_filetypes = ['markdown']
 " map <Leader>tt <Plug>VimwikiToggleListItem
 " nmap -- <Plug>VimwikiRemoveHeaderLevel
-" }}}
-
-" notational-fzf-vim {{{
-let g:nv_search_paths = ['~/Documents/Notes']
-" <space>n to search/create a notes
-nnoremap <leader>n :NV<CR>                
-" ctrl-n to create a new note from the search menu
-let g:nv_create_note_key = 'ctrl-n'
-let g:nv_default_extension = '.md'
-let g:nv_ignore_pattern = ['*.json', '*.dict', '.cache/*', 'i/*', '*.jpg', '*.jpeg', '*.png']
 " }}}
 
 " COC.vim {{{

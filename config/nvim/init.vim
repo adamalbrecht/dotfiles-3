@@ -220,6 +220,13 @@
     endif
   endfunction
 
+  function! AutoColorScheme()
+    let timer = timer_start(30000, 'SetColorScheme', {'repeat': -1}) " Re-run every 30 seconds
+    call SetColorScheme() " Initial call to setup the theme
+  endfunction
+
+  call AutoColorScheme()
+
   map <F4> :call ColorSchemeLight()<CR>
   map <F5> :call ColorSchemeDark()<CR>
 
@@ -235,7 +242,8 @@
       set termguicolors
     endif
   endif
-  call SetColorScheme()
+
+  call AutoColorScheme()
 " }}}
 
 " TABS {{{

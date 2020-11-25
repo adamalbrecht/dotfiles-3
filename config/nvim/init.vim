@@ -39,6 +39,7 @@
 
   " LANGUAGE SPECIFIC {{{
   Plug 'ngmy/vim-rubocop'                 " Rubocop is a code formatter / linter for ruby
+  Plug 'tpope/vim-rails'
   Plug 'rhysd/vim-crystal'                " Crystal syntax highlighting
   Plug 'pangloss/vim-javascript'          " Javascript syntax highlighting
   Plug 'MaxMEllon/vim-jsx-pretty'         " JSX / React syntax highlighting
@@ -48,6 +49,8 @@
   Plug 'plasticboy/vim-markdown'          " Better markdown support
   Plug 'slim-template/vim-slim'           " Slim template syntax highlighting
   Plug 'dag/vim-fish'                     " Syntax highlighting for fish shell scripts
+  Plug 'jparise/vim-graphql'
+  Plug 'posva/vim-vue'
   " }}}
 
   " LANGUAGES I'M NOT USING RIGHT NOW {{{

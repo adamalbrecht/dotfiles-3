@@ -31,6 +31,10 @@ alias mux="tmuxinator"
 alias tmux="tmux -2"
 alias tml="tmux list-sessions"
 
+function rename-terminal {
+  echo -ne "\033]0;"$@"\007"
+}
+
 alias vi="command vim"
 alias realvim="command vim"
 alias vim='nvim'

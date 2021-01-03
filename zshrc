@@ -42,6 +42,9 @@ alias vim='nvim'
 # Ruby
 alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake db:migrate"
 alias be "bundle exec"
+# Git
+alias git-pull-all-children "find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;"
+# alias tig='env TERM=xterm tig'
 
 # FZF
 # Use silver searcher for list files from the filesystem

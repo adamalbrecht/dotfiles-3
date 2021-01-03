@@ -42,6 +42,8 @@ alias vim='nvim'
 # Ruby
 alias dbmigrate "bundle exec rake db:migrate db:rollback; and bundle exec rake db:migrate"
 alias be "bundle exec"
+alias rubofix="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a"
+
 # Git
 alias git-pull-all-children "find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;"
 # alias tig='env TERM=xterm tig'

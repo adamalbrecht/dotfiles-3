@@ -60,6 +60,7 @@
 
   " WRITING {{{
   Plug 'vimwiki/vimwiki'
+  Plug 'mattn/calendar-vim'
   Plug 'junegunn/goyo.vim'              " Distraction Free Writing Mode
   Plug 'itspriddle/vim-marked'          " Preview Markdown Files in Marked 2
   Plug 'jkramer/vim-checkbox'

@@ -5,6 +5,7 @@
         protocol = https
 [alias]
         co = checkout
+        chekcout = checkout
         count   = !git shortlog -sn
         unstage = reset --
 [color]

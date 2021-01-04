@@ -59,8 +59,9 @@
   " }}}
 
   " WRITING {{{
-  Plug 'vimwiki/vimwiki'
-  Plug 'mattn/calendar-vim'
+  Plug 'godlygeek/tabular'              " Recommended for vim-markdown
+  Plug 'plasticboy/vim-markdown'        " Markdown filetype
+  Plug 'lervag/wiki.vim'                " Better, simpler version of vimwiki
   Plug 'junegunn/goyo.vim'              " Distraction Free Writing Mode
   Plug 'itspriddle/vim-marked'          " Preview Markdown Files in Marked 2
   Plug 'jkramer/vim-checkbox'
@@ -119,13 +120,9 @@
   " Spell-check Markdown files and Git commit messages
   autocmd FileType markdown setlocal spell
   autocmd FileType gitcommit setlocal spell
-  autocmd FileType vimwiki setlocal spell
-  autocmd FileType vimwiki.markdown setlocal spell
 
   autocmd FileType markdown setlocal complete+=kspell
   autocmd FileType gitcommit setlocal complete+=kspell
-  autocmd FileType vimwiki setlocal complete+=kspell
-  autocmd FileType vimwiki.markdown setlocal complete+=kspell
 
 " }}}
 
@@ -417,13 +414,21 @@ let g:vim_markdown_conceal_code_blocks = 0
 let g:marked_filetypes = ["vimwiki.markdown", "markdown", "vimwiki"]
 " }}}
 
-" VIM WIKI {{{
-let g:vimwiki_list = [{'path': '~/Documents/Notes/',
-                    \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_global_ext = 0
-let g:vimwiki_filetypes = ['markdown']
-map <Leader>tt <Plug>VimwikiToggleListItem
-nmap -- <Plug>VimwikiRemoveHeaderLevel
+" WIKI.VIM {{{
+let g:wiki_root = '~/Documents/Notes'
+let g:wiki_filetypes = ['wiki', 'markdown', 'md']
+let g:wiki_link_target_type = 'md'
+let g:wiki_tags_format_pattern = '\v%(^|\s)#\zs[^# ]+'
+let g:wiki_journal = {
+    \ 'name': 'diary',
+    \ 'frequency': 'daily',
+    \ 'date_format': {
+    \   'daily' : '%Y-%m-%d',
+    \   'weekly' : '%Y_w%V',
+    \   'monthly' : '%Y_m%m',
+    \ },
+    \}
+let g:wiki_mappings_use_defaults = 'all'
 " }}}
 
 " notational-fzf-vim {{{
@@ -436,15 +441,12 @@ let g:nv_create_note_window = 'tabedit'
 let g:nv_default_extension = '.md'
 let g:nv_ignore_pattern = ['*.json', '*.dict', '.cache/*', 'i/*', '*.jpg', '*.jpeg', '*.png']
 " }}}
-" }}}
 
 " COC.vim {{{
 let g:coc_global_extensions = ["coc-css"]
 
 " Disable in plain markdown, git commits, etc filetypes
 autocmd FileType markdown let b:coc_suggest_disable = 1
-autocmd FileType vimwiki let b:coc_suggest_disable = 1
-autocmd FileType vimwiki.markdown let b:coc_suggest_disable = 1
 autocmd FileType gitcommit let b:coc_suggest_disable = 1
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

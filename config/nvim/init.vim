@@ -429,6 +429,11 @@ let g:wiki_journal = {
     \ },
     \}
 let g:wiki_mappings_use_defaults = 'all'
+
+let g:wiki_mappings_global = {
+      \ '<plug>(wiki-journal-next)' : '<c-j>',
+      \ '<plug>(wiki-journal-prev)' : '<c-k>',
+      \}
 " }}}
 
 " notational-fzf-vim {{{

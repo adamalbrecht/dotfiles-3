@@ -420,7 +420,7 @@ let g:wiki_filetypes = ['wiki', 'markdown', 'md']
 let g:wiki_link_target_type = 'md'
 let g:wiki_tags_format_pattern = '\v%(^|\s)#\zs[^# ]+'
 let g:wiki_journal = {
-    \ 'name': 'diary',
+    \ 'name': 'journal',
     \ 'frequency': 'daily',
     \ 'date_format': {
     \   'daily' : '%Y-%m-%d',

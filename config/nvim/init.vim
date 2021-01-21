@@ -355,10 +355,12 @@ let g:crystal_auto_format = 1
   nnoremap <silent> <leader>b :Buffers<CR>
   " <leader>o to fuzzy find recently opened files in project
   nnoremap <silent> <leader>m :History<CR>
-  " Open fzf into a modal popup window. Place it at the top and a little smaller than standard
-  let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.3, 'yoffset': 1.0, 'border': 'horizontal' } }
+  " Open fzf into a modal popup window.
+  let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.4, 'yoffset': 0.25, 'border': 'rounded' } }
+  " Tweak colors
+  let g:fzf_colors = { 'border':  ['fg', 'Comment'] }
   " Disable preview window
-  " let g:fzf_preview_window = ''
+  let g:fzf_preview_window = ''
 " }}}
 
 " Ruby Customization {{{

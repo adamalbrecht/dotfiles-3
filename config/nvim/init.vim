@@ -455,6 +455,10 @@ let g:nv_ignore_pattern = ['*.json', '*.dict', '.cache/*', 'i/*', '*.jpg', '*.jp
 " COC.vim {{{
 let g:coc_global_extensions = ["coc-css"]
 
+" <leader> f to format all or selected
+nmap <leader>f  <Plug>(coc-format)
+vmap <leader>f  <Plug>(coc-format-selected)
+
 " Disable in plain markdown, git commits, etc filetypes
 autocmd FileType markdown let b:coc_suggest_disable = 1
 autocmd FileType gitcommit let b:coc_suggest_disable = 1

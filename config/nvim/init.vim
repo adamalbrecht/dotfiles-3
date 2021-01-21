@@ -420,12 +420,12 @@ let g:marked_filetypes = ["vimwiki.markdown", "markdown", "vimwiki"]
 " }}}
 
 " WIKI.VIM {{{
-let g:wiki_root = '~/Documents/Notes'
+let g:wiki_root = '~/Documents/Wiki'
 let g:wiki_filetypes = ['wiki', 'markdown', 'md']
 let g:wiki_link_target_type = 'md'
 let g:wiki_tags_format_pattern = '\v%(^|\s)#\zs[^# ]+'
 let g:wiki_journal = {
-    \ 'name': 'journal',
+    \ 'name': 'Planner',
     \ 'frequency': 'daily',
     \ 'date_format': {
     \   'daily' : '%Y-%m-%d',

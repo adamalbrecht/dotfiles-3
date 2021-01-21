@@ -31,6 +31,8 @@
   Plug 'vim-syntastic/syntastic'        " Syntax Checker
   " Plug 'ludovicchabant/vim-gutentags'   " Automatically runs ctags upon save
   Plug 'majutsushi/tagbar'              " Displays ctags in sidebar on right
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
   " }}}
 
   " TESTING {{{
@@ -464,6 +466,12 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+" }}}
+
+" UltiSnips {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " }}}
 
 " DASH.vim {{{

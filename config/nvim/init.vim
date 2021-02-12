@@ -443,7 +443,7 @@ let g:wiki_mappings_global = {
 " }}}
 
 " notational-fzf-vim {{{
-let g:nv_search_paths = ['~/Documents/Notes', '~/Code/adam_albrecht_dot_com/source/blog']
+let g:nv_search_paths = ['~/Documents/Wiki', '~/Code/blog/source/blog']
 " <space>n to search/create a notes
 nnoremap <leader>n :NV<CR>                
 " ctrl-n to create a new note from the search menu

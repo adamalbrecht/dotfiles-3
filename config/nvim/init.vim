@@ -23,7 +23,8 @@
   Plug 'tpope/vim-eunuch'               " Unix Helpers from Vim. :Rename, :Delete, :Mkdir, etc
   Plug 'christoomey/vim-tmux-navigator' " Use Ctrl-hjkl to navigate both vim and tmux
   Plug 'rizzatti/dash.vim'              " Search Dash documentation directly from Vim
-  Plug 'gabesoft/vim-ags'
+  " Plug 'gabesoft/vim-ags'
+  Plug 'dyng/ctrlsf.vim'
   " }}}
 
   " AUTOCOMPLETION & LINTING {{{

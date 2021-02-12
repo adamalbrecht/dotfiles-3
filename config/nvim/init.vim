@@ -132,7 +132,7 @@
 
 " LINE NUMBERS {{{
   set number                        " Show Line Numbers
-  " set relativenumber                " Make line numbers relative to current line
+  set relativenumber                " Make line numbers relative to current line
   set numberwidth=5                 " Width of line numbers
 
   " Ctrl-n to toggle between relative and absolute line numbers
